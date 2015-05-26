@@ -69,7 +69,7 @@ public class SchedulerRunner {
 
 		//String deleteTime = ResourceBundle.getMessage(Constants.DELETE_TIME);
 
-		JobDetail job = JobBuilder.newJob(FtpUploadFileJob.class)
+		JobDetail job = JobBuilder.newJob2(FtpUploadFileJob.class)
 				.withIdentity("UploadFileJobToFTP", "group1").build();
 
 		JobDetail jobDelete = JobBuilder.newJob(FtpDeleteFileJob.class)
